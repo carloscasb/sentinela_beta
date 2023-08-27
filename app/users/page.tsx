@@ -3,7 +3,7 @@
 
 
 import Link from "next/link";
-import { IconeCasa, IconeLogin, IconePasta, IconeUser } from "../icons/page";
+//import { IconeCasa,  IconePasta,  } from "../icons/page";
 
 
 export default function UserPage() {

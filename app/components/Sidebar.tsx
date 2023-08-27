@@ -1,10 +1,14 @@
+"use cliente"
 import Image from "next/image"
 import Link from "next/link"
-import {IconeCasa, IconeEventos, IconeFaccoes, IconeLogin, IconeOrganizacoes, IconePasta, IconePessoas, IconeSistema, IconeUsuarios} from '../icons/page'
-import UserPage from "../users/page"
+//import {IconeCasa, IconeEventos, IconeFaccoes,  IconeOrganizacoes,  IconePessoas, IconeSistema, IconeUsuarios} from '../icons/page'
+//import UserPage from "../users/page"
 
+import { FaBeer } from "react-icons/fa";
 
+import { BiCog } from 'react-icons/bi'
 
+import { HiOutlineUsers } from 'react-icons/hi'
 
 export default function Sidebar() {
     return ( 
@@ -13,7 +17,7 @@ export default function Sidebar() {
             <div >
                 <div>
                     <Image
-                        src="/logoS.png"
+                        src="/logo.png"
                         width={150}
                         height={150}
                         alt="Picture of the author"
@@ -22,58 +26,32 @@ export default function Sidebar() {
            
                  <div className="flex-1">
                     <ul  className="pt-2 pb-4 space-y-1 text-sm" >
-                        <li className="rounded-sm">
-                            <Link href='/' className="flex items-center p-3 space-x-4 rounded-md">
-                                {IconeCasa}
-                                <span>Inícios</span>
-                            </Link>
-                        </li>
+                       
 
                         <li className="rounded-sm">
-                            <Link href='/site/evento' className="flex items-center p-3 space-x-4 rounded-md">
-                                {IconeEventos}
-                                <span>Eventos</span>
-                            </Link>
-                        </li>
-
-                        <li className="rounded-sm">
-                            <Link href='/site/pessoa' className="flex items-center p-3 space-x-4 rounded-md">
-                                {IconePessoas}
-                                <span>Pessoas</span>
-                            </Link>
-                        </li>
-
-                        <li className="rounded-sm">
-                            <Link href='/site/faccao' className="flex items-center p-3 space-x-4 rounded-md">
-                                {IconeFaccoes}
-                                <span>Facções</span>
-                            </Link>
-                        </li>
-
-
-                        <li className="rounded-sm">
-                            <Link href='/site/organizacao' className="flex items-center p-3 space-x-4 rounded-md">
-                                {IconeOrganizacoes}
-                                <span>Organizações</span>
-                            </Link>
-                        </li>
-
-                        <li className="rounded-sm">
-                            <Link href='/users' className="flex items-center p-3 space-x-4 rounded-md">
-                                {IconeUsuarios}
-                                <span>Usuários</span>
-                            </Link>
-                        </li>
-
-                        <li className="rounded-sm">
-                            <Link href='/site/sistema' className="flex items-center p-3 space-x-4 rounded-md">
-                                {IconeSistema}
+                            <Link href='/site/sistema' className="flex items-center p-5 space-x-4 rounded-sm">
+                            <FaBeer />
+                           
                                 <span>Sistema</span>
                             </Link>
                         </li>
-
                         
+                        <li className=" rounded-xl">
+                            <Link href='/site/faccao' className="flex items-center p-5 space-x-4  rounded-none ">
+                            
+                           < BiCog/>
+                                <span>Outros</span>
+                            </Link>
+                        </li>
 
+                        <li className=" rounded-xl">
+                            <Link href='/site/faccao' className="flex items-center p-5 space-x-4  rounded-none ">
+                            
+                           < HiOutlineUsers/>
+                                <span>Outros</span>
+                            </Link>
+                        </li>
+                        
                         
                     </ul>
                     </div>

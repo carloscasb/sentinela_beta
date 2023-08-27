@@ -1,4 +1,5 @@
 //import Image from 'next/image'
+//import {icone} from "../app/icons/page"
 
 export default function Home() {
   return (
