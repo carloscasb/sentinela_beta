@@ -63,8 +63,8 @@ export default async function FaccPage() {
                   <tr key={facc.id}>
                     <td>{index + 1}</td>
                     <td>{facc.name} </td>
-                    <td> 
-                      <Updatefacc /**  brands={brands}*//>
+                    <td className=" flex justify-center space-x-1"> 
+                      <Updatefacc facc={facc} /**  brands={brands}*//>
                       <Deletefacc facc={facc} />
                        </td>
                   </tr>
@@ -75,9 +75,6 @@ export default async function FaccPage() {
           </div>
         </div>
       </div>
-
-
-
-      
+     
   )
 }

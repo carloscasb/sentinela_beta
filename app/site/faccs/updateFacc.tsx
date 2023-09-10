@@ -4,6 +4,7 @@ import { SyntheticEvent, useState } from "react";
 import axios from "axios";
 /////6
 import { useRouter } from "next/navigation";
+import { text } from "stream/consumers";
 ///5.1 EM VEZ DE IMPORTAR A TABELA ------import { Facc } from "@prisma/client";
 ///5.1 DECLARAMOS OS TIPOS --- Já podemos usar {facc.id ou facc.name}
 //import type { Facc } from "@prisma/client";
@@ -15,15 +16,15 @@ type Facc = {
 
 
 
-const Updatefacc =  () => {
+const Updatefacc =  ({ facc }: { facc: Facc }) => {
 
      //1 CRIAR ESTADO DE  VISIVEL (para trabalhar com modal)
  const [isOpen, setIsOpen] = useState(false);
 
- //2 CRIAR ESTADO (inicailmente com o campo a mudar) PREPARANDO PARA GRAVAR
+ //2 CRIAR ESTADO (inicailmente com o campo a mudar) PREPARANDO PARA EDITAR
  //2/ SE TIVESSE RELACIONAMETO FARIAMOS TAMBEM PARA O ITEM RELACIONADO
  //2/ NA TABELA Facc SÒ TEM UM REGISTRO(linha) O (name), se tivesse mais fariamos
- const [name, setName] = useState("nome");
+ const [name, setName] = useState(facc.name);
 
 /////6 DECLARANDO A ROTA
 const router = useRouter();
@@ -33,16 +34,16 @@ const router = useRouter();
      setIsOpen(!isOpen);
  }
 
- ////4 VAMOS FAZER UMA FUCTION Async PARA GRAVAR (lidar) OS DADOS, (ESSA FUNCTION VAI SER CHAMADA LA NO FORM 
+ ////4 VAMOS FAZER UMA FUCTION Async PARA EDITAR (lidar) OS DADOS, (ESSA FUNCTION VAI SER CHAMADA LA NO FORM 
  // COM O EVENTO onSubmit)
 
- const handleSubmitF = async (e: SyntheticEvent) => {
+ const handleUpadeF = async (e: SyntheticEvent) => {
     e.preventDefault();
      /////5 PAUSAREMOS AQUI PARA FAZER A API
-    /////5 NESSE MOMENTO FAREMOS UMA api/facss/router.ts para fazer o CAMINHO (METODOS POST, DELETE, UPDATE)
+    /////5 NESSE MOMENTO FAREMOS UMA api/facss/router.ts para fazer o CAMINHO (METODOS UPDATE, DELETE, )
     /////5 IMPORTAR AXIOS (la em cima) E FAZ O CAMINHO PARA O POST (api/facss)
     
-    await axios.post ("../api/faccs", {
+    await axios.patch(`./api/faccs/${facc.id}`, {
          /////5 ESCOLHE O ITEM
          name: name,
     });
@@ -66,28 +67,29 @@ return (
 <div className={isOpen ? "modal modal-open" : "modal"}>
         
     <div className="modal-box">
-                <h3 className="font-bold text-lg">Add New Facção</h3>
+                <h3 className="font-bold text-lg">Update Facção {facc.name}</h3>
                     
-                <form onSubmit={handleSubmitF}>
+                <form onSubmit={handleUpadeF}>
                     <div className="form-control w-full">
-                        <label  className="label font-bold">Editar Facção </label>
-                       
-                        <input  type="text" 
-                        ///3/SE MUDAR DE VALOR DIGITADO NO INPUT ASSUMA O NOVO
-                          value={name}
-                       
-                        onChange = {(e)=> (e.target.value) }
-                        className="input input-bordered" placeholder="Nome Facção" />
+                        <label className="label font-bold">Editar Facção </label>
+
+                        <input type="text"
+                            ///3/SE MUDAR DE VALOR DIGITADO NO INPUT ASSUMA O NOVO
+
+                            value={name}
+                            onChange={(e) => (e.target.value)}
+
+                            className="input input-bordered" placeholder="Nome Facção" />
                     </div>
                     <div className="modal action"></div>
                     <button type="button" className="btn" onClick={handleModalF}>
-                                Close
-                            </button>
+                        Close
+                    </button>
 
-                            <button type="submit" className="btn btn-primary">
-                                Update
-                            </button>
-                    </form>
+                    <button type="submit" className="btn btn-primary">
+                        Update
+                    </button>
+                </form>
                 </div>
           
         </div>

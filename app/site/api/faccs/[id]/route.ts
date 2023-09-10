@@ -6,6 +6,28 @@ import type { Facc } from "@prisma/client";
 //1 CRIA UMA NOVA ESTANCIA DO PRisma
 const prisma = new PrismaClient();
 
+/// FUNCTION PARA EDITAR
+export const PATCH = async (request: Request, {params}: {params: {id: string}})=>{
+    const body: Facc = await request.json();
+    const facc = await prisma.facc.update({
+
+        where:{
+            id: Number(params.id)
+        },
+        data: {
+            name: body.name
+        }
+      
+    });
+    return NextResponse.json(facc, {status: 200});
+    
+}
+
+
+
+
+/// FUNCTION PARA DELETRA
+
 
 export const DELETE = async (request: Request, {params}: {params: {id: string}}) =>{
    
