@@ -17,10 +17,10 @@ export default function Sidebar() {
         <div className={" max-h-screen w-40 bg-red-100 border-r-[1px]  border-gray-300  float-left flex-col  "}>
             <div >
                 <div>
-                    <Image
+                    <Image 
                         src="/logo.png"
-                        width={150}
-                        height={150}
+                        width={'150'}
+                        height={'150'}
                         alt="Picture of the author"
                     />
                 </div>
@@ -36,21 +36,21 @@ export default function Sidebar() {
                         </li>
 
                         <li className="rounded-sm">
-                            <Link href='/site/evento' className="flex items-center p-3 space-x-4 rounded-md">
+                            <Link href='/site/eventos' className="flex items-center p-3 space-x-4 rounded-md">
                             <HiOutlineFire size={30}/>
                                 <span>Eventos</span>
                             </Link>
                         </li>
 
                         <li className="rounded-sm">
-                            <Link href='/site/pessoa' className="flex items-center p-3 space-x-4 rounded-md">
+                            <Link href='/site/pessoas' className="flex items-center p-3 space-x-4 rounded-md">
                                 <HiOutlineUsers size={30}/>
                                 <span>Pessoas</span>
                             </Link>
                         </li>
 
                         <li className="rounded-sm">
-                            <Link href='/site/faccao' className="flex items-center p-3 space-x-4 rounded-md">
+                            <Link href='/site/faccs' className="flex items-center p-3 space-x-4 rounded-md">
                                 <HiOutlineFlag size={30}/>
                                 <span>Facções</span>
                             </Link>
@@ -58,28 +58,28 @@ export default function Sidebar() {
 
 
                         <li className="rounded-sm">
-                            <Link href='/site/organizacao' className="flex items-center p-3 space-x-4 rounded-md">
+                            <Link href='/site/organs' className="flex items-center p-3 space-x-4 rounded-md">
                                 <HiOutlineScale size={30}/>
                                 <span>Organizações</span>
                             </Link>
                         </li>
 
                         <li className="rounded-sm">
-                            <Link href='/site/usuario' className="flex items-center p-3 space-x-4 rounded-md">
+                            <Link href='/site/usuarios' className="flex items-center p-3 space-x-4 rounded-md">
                                 <HiOutlineUserGroup size={30}/>
                                 <span>Usuários</span>
                             </Link>
                         </li>
 
                         <li className="rounded-sm">
-                            <Link href='/site/sistema' className="flex items-center p-3 space-x-4 rounded-md">
+                            <Link href='/site/sistemas' className="flex items-center p-3 space-x-4 rounded-md">
                                 <HiOutlineCog size={30}/>
                                 <span>Sistema</span>
                             </Link>
                         </li>
                         
                         <li className="rounded-sm">
-                            <Link href='/site/suporte' className="flex items-center p-3 space-x-4 rounded-md">
+                            <Link href='/site/suportes' className="flex items-center p-3 space-x-4 rounded-md">
                                 <HiOutlineKey size={30}/>
                                 <span>Suporte</span>
                             </Link>
