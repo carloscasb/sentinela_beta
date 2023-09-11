@@ -17,7 +17,8 @@ const getUsuarios = async () => {
       acesso: true,
       organId: true,
       organ: true,
-    },
+    }, 
+  
   });
   return res;
 };
@@ -39,7 +40,7 @@ const getAcessos = async ()=> {
 
 const Usuario = async () => {
 //VAmos declarar os organs e acessos
-const [ usuarios, organs, acessos ] = await Promise.all([getUsuarios(), getOrgans(), getAcessos] ) ;
+const [ usuarios, organs, acessos ] = await Promise.all([getUsuarios(), getOrgans(), getAcessos()]) ;
 //console.log(acessos);
 
 

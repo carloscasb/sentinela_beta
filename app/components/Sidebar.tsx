@@ -22,6 +22,7 @@ export default function Sidebar() {
                         width={'150'}
                         height={'150'}
                         alt="Picture of the author"
+                        priority
                     />
                 </div>
            

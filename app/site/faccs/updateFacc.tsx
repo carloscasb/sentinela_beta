@@ -47,8 +47,7 @@ const router = useRouter();
          /////5 ESCOLHE O ITEM
          name: name,
     });
-
-     
+   
      /////6 TEM UMA IMPORTAÇÃO IMPORTANTE QUE È A DO useRouter NAvigatiom e DECLARAR ACIMA
      /////6 ATUALIZA A ROTA
      router.refresh();
@@ -67,17 +66,17 @@ return (
 <div className={isOpen ? "modal modal-open" : "modal"}>
         
     <div className="modal-box">
-                <h3 className="font-bold text-lg">Update Facção {facc.name}</h3>
+                <h3 className="font-bold text-lg">Update  {facc.name}</h3>
                     
                 <form onSubmit={handleUpadeF}>
                     <div className="form-control w-full">
                         <label className="label font-bold">Editar Facção </label>
 
                         <input type="text"
-                            ///3/SE MUDAR DE VALOR DIGITADO NO INPUT ASSUMA O NOVO
+                            ///3/SE MUDAR DE VALOR DIGITADO NO INPUT ASSUMA O NOVO (NO UPDATE MUDEI PARA setName)
 
                             value={name}
-                            onChange={(e) => (e.target.value)}
+                            onChange={(e) => setName(e.target.value)}
 
                             className="input input-bordered" placeholder="Nome Facção" />
                     </div>

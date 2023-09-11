@@ -5,7 +5,7 @@ import { useState } from "react";
 import  type  { Organ } from "@prisma/client";
 import type { Acesso } from "@prisma/client";
 
-const AddUsuario = ({organs}:{organs: Organ[]}, {acessos}:{acessos: Acesso[]}) => {
+const AddUsuario = ({organs}:{organs: Organ[]} , {acessos}:{acessos: Acesso[]}) => {
 
     // mudar estado de VISIVEL
     const [isOpen, setIsOpen] = useState(false);
@@ -72,13 +72,13 @@ const AddUsuario = ({organs}:{organs: Organ[]}, {acessos}:{acessos: Acesso[]}) =
                                     Selecione o Nivel de Acesso
                                 </option>
 
-                               <option value="">
-                                    Nivel 1
-                                </option>
+                              
+                                <option value="">COORDENADOR</option>
+                                <option value="">GERENTE</option>
+                                <option value="">OSTENSIVO</option>
+                                 
 
-                             
-
-                            </select>
+                          </select>
                         </div>
 
                         <div className="modal-action">
@@ -102,3 +102,7 @@ const AddUsuario = ({organs}:{organs: Organ[]}, {acessos}:{acessos: Acesso[]}) =
 }
 
 export default AddUsuario;
+
+/**  <option value="">
+                                   Nivel 1
+                               </option>*/

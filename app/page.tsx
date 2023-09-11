@@ -9,9 +9,11 @@ export default function Home() {
   <div className=' justify-center items-center'>
               <Image
                 src="/logo.png"
-                width= {"500"}
-                height={'550'}
+                width= {"500" }
+                height={'500'}
+                
                 alt="Picture of the author"
+                priority
                 
               />
 
