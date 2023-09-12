@@ -53,7 +53,7 @@ const [ usuarios, organs, acessos ] = await Promise.all([getUsuarios(), getOrgan
             <div className=" bg-white">
 
               <div className="mb-2">
-                <AddUsuario organs={organs}/>
+                <AddUsuario organs={organs} />
                                
               </div>
              
