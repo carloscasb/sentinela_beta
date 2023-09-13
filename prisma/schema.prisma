@@ -27,7 +27,7 @@ model Usuario {
   id      Int      @id @default(autoincrement())
   email   String   @unique
   name    String?
-  reatedAt DateTime @default(now())
+  createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   acesso     Acesso    @relation(fields: [acessoId], references: [id])
   acessoId   Int
@@ -46,11 +46,27 @@ model Pessoa{
   name String 
   vulgo String
   mae String
+  pai String
+  rg String
+  cpf String
+  foto String
   facc  Facc @relation(fields: [faccId], references: [id])
   faccId   Int
+  evento  Evento @relation(fields: [eventoId], references: [id])
+  eventoId   Int
+
 }
 
 
-
+model Evento{
+id    Int     @id @default(autoincrement())
+title String
+data String
+status String
+relato String
+ufc String
+municipio String
+pessoas Pessoa[]
+}
 
 

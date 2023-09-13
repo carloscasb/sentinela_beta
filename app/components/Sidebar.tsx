@@ -17,11 +17,11 @@ export default function Sidebar() {
         <div className={" max-h-screen w-40 bg-red-100 border-r-[1px]  border-gray-300  float-left flex-col  "}>
             <div >
                 <div>
-                    <Image 
-                        src="/logo.png"
-                        width={'150'}
-                        height={'150'}
-                        alt="Picture of the author"
+                    <Image
+                        src="/logoS.png"
+                        width={150}
+                        height={150}
+                        alt="lobo3"
                         priority
                     />
                 </div>
