@@ -1,13 +1,11 @@
 
-
-
-
     'use client'
 
     import { useState } from "react";
     import  type  { Organ } from "@prisma/client";
+    import type { Acesso } from "@prisma/client";
     
-    const AddUsuario = ({organs}:{organs: Organ[]}) => {
+    const AddUsuario = ({organs}:{organs: Organ[]}, {acessos}:{acessos: Acesso[]}) => {
     
         // mudar estado de VISIVEL
         const [isOpen, setIsOpen] = useState(false);
@@ -74,9 +72,14 @@
                                         Selecione o Nivel de Acesso
                                     </option>
     
-                                    <option value="">
-                                        Nivel 1
-                                    </option>
+                                     {/**acessos.map((acesso)=> (
+                                        <option value={acesso.id} key={acesso.id}>{acesso.title}</option>
+                                    ))*/}
+
+                                    
+                                <option value="">COORDENADOR</option>
+                                <option value="">GERENTE</option>
+                                <option value="">OSTENSIVO</option>
     
                                 </select>
                             </div>
