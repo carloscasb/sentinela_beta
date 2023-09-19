@@ -8,14 +8,7 @@ export default function Pessoa(){
             <div className="flex-grow text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">
                 Will grow
 
-                <div>
- <Image
-     src="/logoS.png"
-     width={150}
-     height={150}
-     alt="Picture of the author"
- />
-</div>
+                
 <div className=" flex max-h-96 max-w-ms bg-slate-500 justify-center ">
 
 
