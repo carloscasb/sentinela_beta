@@ -16,8 +16,8 @@ export default function Evento() {
           <h2 className="text-base font-semibold leading-7 text-gray-900">Personal Information</h2>
       
 
-          <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-            <div className="sm:col-span-full">
+          <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6 ">
+            <div className="sm:col-span-full ">
               <label form="first-name" className="block text-sm font-medium leading-6 text-gray-900">Titulo do Evento</label>
               <div className="mt-2">
                 <input type="text" name="first-name" id="first-name" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
@@ -56,11 +56,7 @@ export default function Evento() {
               </div>
             </div>
 
-            
-
-            
-
-            <div className="col-span-full">
+               <div className="col-span-full">
               <label form="about" className="block text-sm font-medium leading-6 text-gray-900">About</label>
               <div className="mt-2">
                 <textarea id="about" name="about" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
