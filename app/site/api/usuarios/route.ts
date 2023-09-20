@@ -1,4 +1,4 @@
-
+/** 
 import { NextRequest, NextResponse } from "next/server";
 import {  PrismaClient } from "@prisma/client";
 
@@ -16,27 +16,36 @@ export const POST = async (request: Request) => {
             email: body.email,
             name: body.name,
             organId: body.organId,
-            acessoId: body.acessoId
+            acessoId: body.acessoId,
             
 
        
         }
     });
     return NextResponse.json(usuario,  {status: 201});
+    }
+
+
     
-}
-
-/** 
-export const POST = async (request: NextRequest) => {
-
-    const {name} = await request.json();
-    const facc = await prisma.facc.create({
-        data:{
-            name
-        }
-    })
-
-    return NextResponse.json({facc})
-}
 
 */
+
+
+
+import { NextResponse } from "next/server";
+import { PrismaClient } from "@prisma/client";
+import type { Usuario } from "@prisma/client";
+const prisma = new PrismaClient();
+
+export const POST = async (request: Request) =>{
+    const body: Usuario = await request.json();
+    const usuario = await prisma.usuario.create({
+        data:{
+            name: body.name,
+            email: body.email,
+            organId: body.organId,
+            acessoId: body.acessoId
+        }
+    });
+    return NextResponse.json(usuario, {status: 201});
+}

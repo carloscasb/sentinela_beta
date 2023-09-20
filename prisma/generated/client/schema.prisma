@@ -1,76 +1,66 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
-
   output   = "./generated/client"
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
-
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
   directUrl = env("DIRECT_URL")
 }
 
-
 model Organ {
-  id    Int     @id @default(autoincrement())
-  name String  @unique
+  id       Int       @id @default(autoincrement())
+  name     String    @unique
   usuarios Usuario[]
 }
 
 model Acesso {
-  id    Int     @id @default(autoincrement())
-  title String  @unique
+  id       Int       @id @default(autoincrement())
+  title    String    @unique
   usuarios Usuario[]
 }
 
 model Usuario {
-  id      Int      @id @default(autoincrement())
-  email   String   @unique
-  name    String?
-  createdAt DateTime @default(now())
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  name      String?
   updatedAt DateTime @updatedAt
-  acesso     Acesso    @relation(fields: [acessoId], references: [id])
-  acessoId   Int
-  organ     Organ    @relation(fields: [organId], references: [id])
+  acessoId  Int
   organId   Int
+  createdAt DateTime @default(now())
+  acesso    Acesso   @relation(fields: [acessoId], references: [id])
+  organ     Organ    @relation(fields: [organId], references: [id])
 }
 
-model Facc{
-  id    Int     @id @default(autoincrement())
-  name String  @unique
+model Facc {
+  id      Int      @id @default(autoincrement())
+  name    String   @unique
   pessoas Pessoa[]
 }
 
-model Pessoa{
-  id    Int     @id @default(autoincrement())
-  name String 
-  vulgo String
-  mae String
-  pai String
-  rg String
-  cpf String
-  foto String
-  facc  Facc @relation(fields: [faccId], references: [id])
+model Pessoa {
+  id       Int    @id @default(autoincrement())
+  name     String
+  vulgo    String
+  mae      String
   faccId   Int
-  evento  Evento @relation(fields: [eventoId], references: [id])
-  eventoId   Int
-
+  cpf      String
+  eventoId Int
+  foto     String
+  pai      String
+  rg       String
+  evento   Evento @relation(fields: [eventoId], references: [id])
+  facc     Facc   @relation(fields: [faccId], references: [id])
 }
 
-
-model Evento{
-id    Int     @id @default(autoincrement())
-title String
-data String
-status String
-relato String
-ufc String
-municipio String
-pessoas Pessoa[]
+model Evento {
+  id        Int      @id @default(autoincrement())
+  title     String
+  data      String
+  status    String
+  relato    String
+  ufc       String
+  municipio String
+  pessoas   Pessoa[]
 }
-
-

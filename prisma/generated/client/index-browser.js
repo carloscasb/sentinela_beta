@@ -16,12 +16,12 @@ exports.Prisma = Prisma
 exports.$Enums = {}
 
 /**
- * Prisma Client JS version: 5.2.0
- * Query Engine version: 2804dc98259d2ea960602aca6b8e7fdc03c1758f
+ * Prisma Client JS version: 5.3.1
+ * Query Engine version: 61e140623197a131c2a6189271ffee05a7aa9a59
  */
 Prisma.prismaVersion = {
-  client: "5.2.0",
-  engine: "2804dc98259d2ea960602aca6b8e7fdc03c1758f"
+  client: "5.3.1",
+  engine: "61e140623197a131c2a6189271ffee05a7aa9a59"
 }
 
 Prisma.PrismaClientKnownRequestError = () => {
@@ -121,10 +121,10 @@ exports.Prisma.UsuarioScalarFieldEnum = {
   id: 'id',
   email: 'email',
   name: 'name',
-  createdAt: 'createdAt',
   updatedAt: 'updatedAt',
   acessoId: 'acessoId',
-  organId: 'organId'
+  organId: 'organId',
+  createdAt: 'createdAt'
 };
 
 exports.Prisma.FaccScalarFieldEnum = {
@@ -137,12 +137,12 @@ exports.Prisma.PessoaScalarFieldEnum = {
   name: 'name',
   vulgo: 'vulgo',
   mae: 'mae',
-  pai: 'pai',
-  rg: 'rg',
-  cpf: 'cpf',
-  foto: 'foto',
   faccId: 'faccId',
-  eventoId: 'eventoId'
+  cpf: 'cpf',
+  eventoId: 'eventoId',
+  foto: 'foto',
+  pai: 'pai',
+  rg: 'rg'
 };
 
 exports.Prisma.EventoScalarFieldEnum = {

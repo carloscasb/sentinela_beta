@@ -282,8 +282,8 @@ export namespace Prisma {
   export import Exact = $Public.Exact
 
   /**
-   * Prisma Client JS version: 5.2.0
-   * Query Engine version: 2804dc98259d2ea960602aca6b8e7fdc03c1758f
+   * Prisma Client JS version: 5.3.1
+   * Query Engine version: 61e140623197a131c2a6189271ffee05a7aa9a59
    */
   export type PrismaVersion = {
     client: string
@@ -3317,30 +3317,30 @@ export namespace Prisma {
     id: number | null
     email: string | null
     name: string | null
-    createdAt: Date | null
     updatedAt: Date | null
     acessoId: number | null
     organId: number | null
+    createdAt: Date | null
   }
 
   export type UsuarioMaxAggregateOutputType = {
     id: number | null
     email: string | null
     name: string | null
-    createdAt: Date | null
     updatedAt: Date | null
     acessoId: number | null
     organId: number | null
+    createdAt: Date | null
   }
 
   export type UsuarioCountAggregateOutputType = {
     id: number
     email: number
     name: number
-    createdAt: number
     updatedAt: number
     acessoId: number
     organId: number
+    createdAt: number
     _all: number
   }
 
@@ -3361,30 +3361,30 @@ export namespace Prisma {
     id?: true
     email?: true
     name?: true
-    createdAt?: true
     updatedAt?: true
     acessoId?: true
     organId?: true
+    createdAt?: true
   }
 
   export type UsuarioMaxAggregateInputType = {
     id?: true
     email?: true
     name?: true
-    createdAt?: true
     updatedAt?: true
     acessoId?: true
     organId?: true
+    createdAt?: true
   }
 
   export type UsuarioCountAggregateInputType = {
     id?: true
     email?: true
     name?: true
-    createdAt?: true
     updatedAt?: true
     acessoId?: true
     organId?: true
+    createdAt?: true
     _all?: true
   }
 
@@ -3478,10 +3478,10 @@ export namespace Prisma {
     id: number
     email: string
     name: string | null
-    createdAt: Date
     updatedAt: Date
     acessoId: number
     organId: number
+    createdAt: Date
     _count: UsuarioCountAggregateOutputType | null
     _avg: UsuarioAvgAggregateOutputType | null
     _sum: UsuarioSumAggregateOutputType | null
@@ -3507,10 +3507,10 @@ export namespace Prisma {
     id?: boolean
     email?: boolean
     name?: boolean
-    createdAt?: boolean
     updatedAt?: boolean
     acessoId?: boolean
     organId?: boolean
+    createdAt?: boolean
     acesso?: boolean | AcessoDefaultArgs<ExtArgs>
     organ?: boolean | OrganDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["usuario"]>
@@ -3519,10 +3519,10 @@ export namespace Prisma {
     id?: boolean
     email?: boolean
     name?: boolean
-    createdAt?: boolean
     updatedAt?: boolean
     acessoId?: boolean
     organId?: boolean
+    createdAt?: boolean
   }
 
   export type UsuarioInclude<ExtArgs extends $Extensions.Args = $Extensions.DefaultArgs> = {
@@ -3541,10 +3541,10 @@ export namespace Prisma {
       id: number
       email: string
       name: string | null
-      createdAt: Date
       updatedAt: Date
       acessoId: number
       organId: number
+      createdAt: Date
     }, ExtArgs["result"]["usuario"]>
     composites: {}
   }
@@ -3945,10 +3945,10 @@ export namespace Prisma {
     readonly id: FieldRef<"Usuario", 'Int'>
     readonly email: FieldRef<"Usuario", 'String'>
     readonly name: FieldRef<"Usuario", 'String'>
-    readonly createdAt: FieldRef<"Usuario", 'DateTime'>
     readonly updatedAt: FieldRef<"Usuario", 'DateTime'>
     readonly acessoId: FieldRef<"Usuario", 'Int'>
     readonly organId: FieldRef<"Usuario", 'Int'>
+    readonly createdAt: FieldRef<"Usuario", 'DateTime'>
   }
     
 
@@ -5247,12 +5247,12 @@ export namespace Prisma {
     name: string | null
     vulgo: string | null
     mae: string | null
+    faccId: number | null
+    cpf: string | null
+    eventoId: number | null
+    foto: string | null
     pai: string | null
     rg: string | null
-    cpf: string | null
-    foto: string | null
-    faccId: number | null
-    eventoId: number | null
   }
 
   export type PessoaMaxAggregateOutputType = {
@@ -5260,12 +5260,12 @@ export namespace Prisma {
     name: string | null
     vulgo: string | null
     mae: string | null
+    faccId: number | null
+    cpf: string | null
+    eventoId: number | null
+    foto: string | null
     pai: string | null
     rg: string | null
-    cpf: string | null
-    foto: string | null
-    faccId: number | null
-    eventoId: number | null
   }
 
   export type PessoaCountAggregateOutputType = {
@@ -5273,12 +5273,12 @@ export namespace Prisma {
     name: number
     vulgo: number
     mae: number
+    faccId: number
+    cpf: number
+    eventoId: number
+    foto: number
     pai: number
     rg: number
-    cpf: number
-    foto: number
-    faccId: number
-    eventoId: number
     _all: number
   }
 
@@ -5300,12 +5300,12 @@ export namespace Prisma {
     name?: true
     vulgo?: true
     mae?: true
+    faccId?: true
+    cpf?: true
+    eventoId?: true
+    foto?: true
     pai?: true
     rg?: true
-    cpf?: true
-    foto?: true
-    faccId?: true
-    eventoId?: true
   }
 
   export type PessoaMaxAggregateInputType = {
@@ -5313,12 +5313,12 @@ export namespace Prisma {
     name?: true
     vulgo?: true
     mae?: true
+    faccId?: true
+    cpf?: true
+    eventoId?: true
+    foto?: true
     pai?: true
     rg?: true
-    cpf?: true
-    foto?: true
-    faccId?: true
-    eventoId?: true
   }
 
   export type PessoaCountAggregateInputType = {
@@ -5326,12 +5326,12 @@ export namespace Prisma {
     name?: true
     vulgo?: true
     mae?: true
+    faccId?: true
+    cpf?: true
+    eventoId?: true
+    foto?: true
     pai?: true
     rg?: true
-    cpf?: true
-    foto?: true
-    faccId?: true
-    eventoId?: true
     _all?: true
   }
 
@@ -5426,12 +5426,12 @@ export namespace Prisma {
     name: string
     vulgo: string
     mae: string
+    faccId: number
+    cpf: string
+    eventoId: number
+    foto: string
     pai: string
     rg: string
-    cpf: string
-    foto: string
-    faccId: number
-    eventoId: number
     _count: PessoaCountAggregateOutputType | null
     _avg: PessoaAvgAggregateOutputType | null
     _sum: PessoaSumAggregateOutputType | null
@@ -5458,14 +5458,14 @@ export namespace Prisma {
     name?: boolean
     vulgo?: boolean
     mae?: boolean
+    faccId?: boolean
+    cpf?: boolean
+    eventoId?: boolean
+    foto?: boolean
     pai?: boolean
     rg?: boolean
-    cpf?: boolean
-    foto?: boolean
-    faccId?: boolean
-    eventoId?: boolean
-    facc?: boolean | FaccDefaultArgs<ExtArgs>
     evento?: boolean | EventoDefaultArgs<ExtArgs>
+    facc?: boolean | FaccDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["pessoa"]>
 
   export type PessoaSelectScalar = {
@@ -5473,37 +5473,37 @@ export namespace Prisma {
     name?: boolean
     vulgo?: boolean
     mae?: boolean
+    faccId?: boolean
+    cpf?: boolean
+    eventoId?: boolean
+    foto?: boolean
     pai?: boolean
     rg?: boolean
-    cpf?: boolean
-    foto?: boolean
-    faccId?: boolean
-    eventoId?: boolean
   }
 
   export type PessoaInclude<ExtArgs extends $Extensions.Args = $Extensions.DefaultArgs> = {
-    facc?: boolean | FaccDefaultArgs<ExtArgs>
     evento?: boolean | EventoDefaultArgs<ExtArgs>
+    facc?: boolean | FaccDefaultArgs<ExtArgs>
   }
 
 
   export type $PessoaPayload<ExtArgs extends $Extensions.Args = $Extensions.DefaultArgs> = {
     name: "Pessoa"
     objects: {
-      facc: Prisma.$FaccPayload<ExtArgs>
       evento: Prisma.$EventoPayload<ExtArgs>
+      facc: Prisma.$FaccPayload<ExtArgs>
     }
     scalars: $Extensions.GetResult<{
       id: number
       name: string
       vulgo: string
       mae: string
+      faccId: number
+      cpf: string
+      eventoId: number
+      foto: string
       pai: string
       rg: string
-      cpf: string
-      foto: string
-      faccId: number
-      eventoId: number
     }, ExtArgs["result"]["pessoa"]>
     composites: {}
   }
@@ -5869,9 +5869,9 @@ export namespace Prisma {
   export interface Prisma__PessoaClient<T, Null = never, ExtArgs extends $Extensions.Args = $Extensions.DefaultArgs> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: 'PrismaPromise';
 
-    facc<T extends FaccDefaultArgs<ExtArgs> = {}>(args?: Subset<T, FaccDefaultArgs<ExtArgs>>): Prisma__FaccClient<$Result.GetResult<Prisma.$FaccPayload<ExtArgs>, T, 'findUniqueOrThrow'> | Null, Null, ExtArgs>;
-
     evento<T extends EventoDefaultArgs<ExtArgs> = {}>(args?: Subset<T, EventoDefaultArgs<ExtArgs>>): Prisma__EventoClient<$Result.GetResult<Prisma.$EventoPayload<ExtArgs>, T, 'findUniqueOrThrow'> | Null, Null, ExtArgs>;
+
+    facc<T extends FaccDefaultArgs<ExtArgs> = {}>(args?: Subset<T, FaccDefaultArgs<ExtArgs>>): Prisma__FaccClient<$Result.GetResult<Prisma.$FaccPayload<ExtArgs>, T, 'findUniqueOrThrow'> | Null, Null, ExtArgs>;
 
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
@@ -5905,12 +5905,12 @@ export namespace Prisma {
     readonly name: FieldRef<"Pessoa", 'String'>
     readonly vulgo: FieldRef<"Pessoa", 'String'>
     readonly mae: FieldRef<"Pessoa", 'String'>
+    readonly faccId: FieldRef<"Pessoa", 'Int'>
+    readonly cpf: FieldRef<"Pessoa", 'String'>
+    readonly eventoId: FieldRef<"Pessoa", 'Int'>
+    readonly foto: FieldRef<"Pessoa", 'String'>
     readonly pai: FieldRef<"Pessoa", 'String'>
     readonly rg: FieldRef<"Pessoa", 'String'>
-    readonly cpf: FieldRef<"Pessoa", 'String'>
-    readonly foto: FieldRef<"Pessoa", 'String'>
-    readonly faccId: FieldRef<"Pessoa", 'Int'>
-    readonly eventoId: FieldRef<"Pessoa", 'Int'>
   }
     
 
@@ -7269,10 +7269,10 @@ export namespace Prisma {
     id: 'id',
     email: 'email',
     name: 'name',
-    createdAt: 'createdAt',
     updatedAt: 'updatedAt',
     acessoId: 'acessoId',
-    organId: 'organId'
+    organId: 'organId',
+    createdAt: 'createdAt'
   };
 
   export type UsuarioScalarFieldEnum = (typeof UsuarioScalarFieldEnum)[keyof typeof UsuarioScalarFieldEnum]
@@ -7291,12 +7291,12 @@ export namespace Prisma {
     name: 'name',
     vulgo: 'vulgo',
     mae: 'mae',
-    pai: 'pai',
-    rg: 'rg',
-    cpf: 'cpf',
-    foto: 'foto',
     faccId: 'faccId',
-    eventoId: 'eventoId'
+    cpf: 'cpf',
+    eventoId: 'eventoId',
+    foto: 'foto',
+    pai: 'pai',
+    rg: 'rg'
   };
 
   export type PessoaScalarFieldEnum = (typeof PessoaScalarFieldEnum)[keyof typeof PessoaScalarFieldEnum]
@@ -7494,10 +7494,10 @@ export namespace Prisma {
     id?: IntFilter<"Usuario"> | number
     email?: StringFilter<"Usuario"> | string
     name?: StringNullableFilter<"Usuario"> | string | null
-    createdAt?: DateTimeFilter<"Usuario"> | Date | string
     updatedAt?: DateTimeFilter<"Usuario"> | Date | string
     acessoId?: IntFilter<"Usuario"> | number
     organId?: IntFilter<"Usuario"> | number
+    createdAt?: DateTimeFilter<"Usuario"> | Date | string
     acesso?: XOR<AcessoRelationFilter, AcessoWhereInput>
     organ?: XOR<OrganRelationFilter, OrganWhereInput>
   }
@@ -7506,10 +7506,10 @@ export namespace Prisma {
     id?: SortOrder
     email?: SortOrder
     name?: SortOrderInput | SortOrder
-    createdAt?: SortOrder
     updatedAt?: SortOrder
     acessoId?: SortOrder
     organId?: SortOrder
+    createdAt?: SortOrder
     acesso?: AcessoOrderByWithRelationInput
     organ?: OrganOrderByWithRelationInput
   }
@@ -7521,10 +7521,10 @@ export namespace Prisma {
     OR?: UsuarioWhereInput[]
     NOT?: UsuarioWhereInput | UsuarioWhereInput[]
     name?: StringNullableFilter<"Usuario"> | string | null
-    createdAt?: DateTimeFilter<"Usuario"> | Date | string
     updatedAt?: DateTimeFilter<"Usuario"> | Date | string
     acessoId?: IntFilter<"Usuario"> | number
     organId?: IntFilter<"Usuario"> | number
+    createdAt?: DateTimeFilter<"Usuario"> | Date | string
     acesso?: XOR<AcessoRelationFilter, AcessoWhereInput>
     organ?: XOR<OrganRelationFilter, OrganWhereInput>
   }, "id" | "email">
@@ -7533,10 +7533,10 @@ export namespace Prisma {
     id?: SortOrder
     email?: SortOrder
     name?: SortOrderInput | SortOrder
-    createdAt?: SortOrder
     updatedAt?: SortOrder
     acessoId?: SortOrder
     organId?: SortOrder
+    createdAt?: SortOrder
     _count?: UsuarioCountOrderByAggregateInput
     _avg?: UsuarioAvgOrderByAggregateInput
     _max?: UsuarioMaxOrderByAggregateInput
@@ -7551,10 +7551,10 @@ export namespace Prisma {
     id?: IntWithAggregatesFilter<"Usuario"> | number
     email?: StringWithAggregatesFilter<"Usuario"> | string
     name?: StringNullableWithAggregatesFilter<"Usuario"> | string | null
-    createdAt?: DateTimeWithAggregatesFilter<"Usuario"> | Date | string
     updatedAt?: DateTimeWithAggregatesFilter<"Usuario"> | Date | string
     acessoId?: IntWithAggregatesFilter<"Usuario"> | number
     organId?: IntWithAggregatesFilter<"Usuario"> | number
+    createdAt?: DateTimeWithAggregatesFilter<"Usuario"> | Date | string
   }
 
   export type FaccWhereInput = {
@@ -7607,14 +7607,14 @@ export namespace Prisma {
     name?: StringFilter<"Pessoa"> | string
     vulgo?: StringFilter<"Pessoa"> | string
     mae?: StringFilter<"Pessoa"> | string
+    faccId?: IntFilter<"Pessoa"> | number
+    cpf?: StringFilter<"Pessoa"> | string
+    eventoId?: IntFilter<"Pessoa"> | number
+    foto?: StringFilter<"Pessoa"> | string
     pai?: StringFilter<"Pessoa"> | string
     rg?: StringFilter<"Pessoa"> | string
-    cpf?: StringFilter<"Pessoa"> | string
-    foto?: StringFilter<"Pessoa"> | string
-    faccId?: IntFilter<"Pessoa"> | number
-    eventoId?: IntFilter<"Pessoa"> | number
-    facc?: XOR<FaccRelationFilter, FaccWhereInput>
     evento?: XOR<EventoRelationFilter, EventoWhereInput>
+    facc?: XOR<FaccRelationFilter, FaccWhereInput>
   }
 
   export type PessoaOrderByWithRelationInput = {
@@ -7622,14 +7622,14 @@ export namespace Prisma {
     name?: SortOrder
     vulgo?: SortOrder
     mae?: SortOrder
+    faccId?: SortOrder
+    cpf?: SortOrder
+    eventoId?: SortOrder
+    foto?: SortOrder
     pai?: SortOrder
     rg?: SortOrder
-    cpf?: SortOrder
-    foto?: SortOrder
-    faccId?: SortOrder
-    eventoId?: SortOrder
-    facc?: FaccOrderByWithRelationInput
     evento?: EventoOrderByWithRelationInput
+    facc?: FaccOrderByWithRelationInput
   }
 
   export type PessoaWhereUniqueInput = Prisma.AtLeast<{
@@ -7640,14 +7640,14 @@ export namespace Prisma {
     name?: StringFilter<"Pessoa"> | string
     vulgo?: StringFilter<"Pessoa"> | string
     mae?: StringFilter<"Pessoa"> | string
+    faccId?: IntFilter<"Pessoa"> | number
+    cpf?: StringFilter<"Pessoa"> | string
+    eventoId?: IntFilter<"Pessoa"> | number
+    foto?: StringFilter<"Pessoa"> | string
     pai?: StringFilter<"Pessoa"> | string
     rg?: StringFilter<"Pessoa"> | string
-    cpf?: StringFilter<"Pessoa"> | string
-    foto?: StringFilter<"Pessoa"> | string
-    faccId?: IntFilter<"Pessoa"> | number
-    eventoId?: IntFilter<"Pessoa"> | number
-    facc?: XOR<FaccRelationFilter, FaccWhereInput>
     evento?: XOR<EventoRelationFilter, EventoWhereInput>
+    facc?: XOR<FaccRelationFilter, FaccWhereInput>
   }, "id">
 
   export type PessoaOrderByWithAggregationInput = {
@@ -7655,12 +7655,12 @@ export namespace Prisma {
     name?: SortOrder
     vulgo?: SortOrder
     mae?: SortOrder
+    faccId?: SortOrder
+    cpf?: SortOrder
+    eventoId?: SortOrder
+    foto?: SortOrder
     pai?: SortOrder
     rg?: SortOrder
-    cpf?: SortOrder
-    foto?: SortOrder
-    faccId?: SortOrder
-    eventoId?: SortOrder
     _count?: PessoaCountOrderByAggregateInput
     _avg?: PessoaAvgOrderByAggregateInput
     _max?: PessoaMaxOrderByAggregateInput
@@ -7676,12 +7676,12 @@ export namespace Prisma {
     name?: StringWithAggregatesFilter<"Pessoa"> | string
     vulgo?: StringWithAggregatesFilter<"Pessoa"> | string
     mae?: StringWithAggregatesFilter<"Pessoa"> | string
+    faccId?: IntWithAggregatesFilter<"Pessoa"> | number
+    cpf?: StringWithAggregatesFilter<"Pessoa"> | string
+    eventoId?: IntWithAggregatesFilter<"Pessoa"> | number
+    foto?: StringWithAggregatesFilter<"Pessoa"> | string
     pai?: StringWithAggregatesFilter<"Pessoa"> | string
     rg?: StringWithAggregatesFilter<"Pessoa"> | string
-    cpf?: StringWithAggregatesFilter<"Pessoa"> | string
-    foto?: StringWithAggregatesFilter<"Pessoa"> | string
-    faccId?: IntWithAggregatesFilter<"Pessoa"> | number
-    eventoId?: IntWithAggregatesFilter<"Pessoa"> | number
   }
 
   export type EventoWhereInput = {
@@ -7826,8 +7826,8 @@ export namespace Prisma {
   export type UsuarioCreateInput = {
     email: string
     name?: string | null
-    createdAt?: Date | string
     updatedAt?: Date | string
+    createdAt?: Date | string
     acesso: AcessoCreateNestedOneWithoutUsuariosInput
     organ: OrganCreateNestedOneWithoutUsuariosInput
   }
@@ -7836,17 +7836,17 @@ export namespace Prisma {
     id?: number
     email: string
     name?: string | null
-    createdAt?: Date | string
     updatedAt?: Date | string
     acessoId: number
     organId: number
+    createdAt?: Date | string
   }
 
   export type UsuarioUpdateInput = {
     email?: StringFieldUpdateOperationsInput | string
     name?: NullableStringFieldUpdateOperationsInput | string | null
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     acesso?: AcessoUpdateOneRequiredWithoutUsuariosNestedInput
     organ?: OrganUpdateOneRequiredWithoutUsuariosNestedInput
   }
@@ -7855,37 +7855,37 @@ export namespace Prisma {
     id?: IntFieldUpdateOperationsInput | number
     email?: StringFieldUpdateOperationsInput | string
     name?: NullableStringFieldUpdateOperationsInput | string | null
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     acessoId?: IntFieldUpdateOperationsInput | number
     organId?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type UsuarioCreateManyInput = {
     id?: number
     email: string
     name?: string | null
-    createdAt?: Date | string
     updatedAt?: Date | string
     acessoId: number
     organId: number
+    createdAt?: Date | string
   }
 
   export type UsuarioUpdateManyMutationInput = {
     email?: StringFieldUpdateOperationsInput | string
     name?: NullableStringFieldUpdateOperationsInput | string | null
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type UsuarioUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
     email?: StringFieldUpdateOperationsInput | string
     name?: NullableStringFieldUpdateOperationsInput | string | null
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     acessoId?: IntFieldUpdateOperationsInput | number
     organId?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type FaccCreateInput = {
@@ -7928,12 +7928,12 @@ export namespace Prisma {
     name: string
     vulgo: string
     mae: string
-    pai: string
-    rg: string
     cpf: string
     foto: string
-    facc: FaccCreateNestedOneWithoutPessoasInput
+    pai: string
+    rg: string
     evento: EventoCreateNestedOneWithoutPessoasInput
+    facc: FaccCreateNestedOneWithoutPessoasInput
   }
 
   export type PessoaUncheckedCreateInput = {
@@ -7941,24 +7941,24 @@ export namespace Prisma {
     name: string
     vulgo: string
     mae: string
+    faccId: number
+    cpf: string
+    eventoId: number
+    foto: string
     pai: string
     rg: string
-    cpf: string
-    foto: string
-    faccId: number
-    eventoId: number
   }
 
   export type PessoaUpdateInput = {
     name?: StringFieldUpdateOperationsInput | string
     vulgo?: StringFieldUpdateOperationsInput | string
     mae?: StringFieldUpdateOperationsInput | string
-    pai?: StringFieldUpdateOperationsInput | string
-    rg?: StringFieldUpdateOperationsInput | string
     cpf?: StringFieldUpdateOperationsInput | string
     foto?: StringFieldUpdateOperationsInput | string
-    facc?: FaccUpdateOneRequiredWithoutPessoasNestedInput
+    pai?: StringFieldUpdateOperationsInput | string
+    rg?: StringFieldUpdateOperationsInput | string
     evento?: EventoUpdateOneRequiredWithoutPessoasNestedInput
+    facc?: FaccUpdateOneRequiredWithoutPessoasNestedInput
   }
 
   export type PessoaUncheckedUpdateInput = {
@@ -7966,12 +7966,12 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     vulgo?: StringFieldUpdateOperationsInput | string
     mae?: StringFieldUpdateOperationsInput | string
+    faccId?: IntFieldUpdateOperationsInput | number
+    cpf?: StringFieldUpdateOperationsInput | string
+    eventoId?: IntFieldUpdateOperationsInput | number
+    foto?: StringFieldUpdateOperationsInput | string
     pai?: StringFieldUpdateOperationsInput | string
     rg?: StringFieldUpdateOperationsInput | string
-    cpf?: StringFieldUpdateOperationsInput | string
-    foto?: StringFieldUpdateOperationsInput | string
-    faccId?: IntFieldUpdateOperationsInput | number
-    eventoId?: IntFieldUpdateOperationsInput | number
   }
 
   export type PessoaCreateManyInput = {
@@ -7979,22 +7979,22 @@ export namespace Prisma {
     name: string
     vulgo: string
     mae: string
+    faccId: number
+    cpf: string
+    eventoId: number
+    foto: string
     pai: string
     rg: string
-    cpf: string
-    foto: string
-    faccId: number
-    eventoId: number
   }
 
   export type PessoaUpdateManyMutationInput = {
     name?: StringFieldUpdateOperationsInput | string
     vulgo?: StringFieldUpdateOperationsInput | string
     mae?: StringFieldUpdateOperationsInput | string
-    pai?: StringFieldUpdateOperationsInput | string
-    rg?: StringFieldUpdateOperationsInput | string
     cpf?: StringFieldUpdateOperationsInput | string
     foto?: StringFieldUpdateOperationsInput | string
+    pai?: StringFieldUpdateOperationsInput | string
+    rg?: StringFieldUpdateOperationsInput | string
   }
 
   export type PessoaUncheckedUpdateManyInput = {
@@ -8002,12 +8002,12 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     vulgo?: StringFieldUpdateOperationsInput | string
     mae?: StringFieldUpdateOperationsInput | string
+    faccId?: IntFieldUpdateOperationsInput | number
+    cpf?: StringFieldUpdateOperationsInput | string
+    eventoId?: IntFieldUpdateOperationsInput | number
+    foto?: StringFieldUpdateOperationsInput | string
     pai?: StringFieldUpdateOperationsInput | string
     rg?: StringFieldUpdateOperationsInput | string
-    cpf?: StringFieldUpdateOperationsInput | string
-    foto?: StringFieldUpdateOperationsInput | string
-    faccId?: IntFieldUpdateOperationsInput | number
-    eventoId?: IntFieldUpdateOperationsInput | number
   }
 
   export type EventoCreateInput = {
@@ -8242,10 +8242,10 @@ export namespace Prisma {
     id?: SortOrder
     email?: SortOrder
     name?: SortOrder
-    createdAt?: SortOrder
     updatedAt?: SortOrder
     acessoId?: SortOrder
     organId?: SortOrder
+    createdAt?: SortOrder
   }
 
   export type UsuarioAvgOrderByAggregateInput = {
@@ -8258,20 +8258,20 @@ export namespace Prisma {
     id?: SortOrder
     email?: SortOrder
     name?: SortOrder
-    createdAt?: SortOrder
     updatedAt?: SortOrder
     acessoId?: SortOrder
     organId?: SortOrder
+    createdAt?: SortOrder
   }
 
   export type UsuarioMinOrderByAggregateInput = {
     id?: SortOrder
     email?: SortOrder
     name?: SortOrder
-    createdAt?: SortOrder
     updatedAt?: SortOrder
     acessoId?: SortOrder
     organId?: SortOrder
+    createdAt?: SortOrder
   }
 
   export type UsuarioSumOrderByAggregateInput = {
@@ -8345,14 +8345,14 @@ export namespace Prisma {
     id?: SortOrder
   }
 
-  export type FaccRelationFilter = {
-    is?: FaccWhereInput
-    isNot?: FaccWhereInput
-  }
-
   export type EventoRelationFilter = {
     is?: EventoWhereInput
     isNot?: EventoWhereInput
+  }
+
+  export type FaccRelationFilter = {
+    is?: FaccWhereInput
+    isNot?: FaccWhereInput
   }
 
   export type PessoaCountOrderByAggregateInput = {
@@ -8360,12 +8360,12 @@ export namespace Prisma {
     name?: SortOrder
     vulgo?: SortOrder
     mae?: SortOrder
+    faccId?: SortOrder
+    cpf?: SortOrder
+    eventoId?: SortOrder
+    foto?: SortOrder
     pai?: SortOrder
     rg?: SortOrder
-    cpf?: SortOrder
-    foto?: SortOrder
-    faccId?: SortOrder
-    eventoId?: SortOrder
   }
 
   export type PessoaAvgOrderByAggregateInput = {
@@ -8379,12 +8379,12 @@ export namespace Prisma {
     name?: SortOrder
     vulgo?: SortOrder
     mae?: SortOrder
+    faccId?: SortOrder
+    cpf?: SortOrder
+    eventoId?: SortOrder
+    foto?: SortOrder
     pai?: SortOrder
     rg?: SortOrder
-    cpf?: SortOrder
-    foto?: SortOrder
-    faccId?: SortOrder
-    eventoId?: SortOrder
   }
 
   export type PessoaMinOrderByAggregateInput = {
@@ -8392,12 +8392,12 @@ export namespace Prisma {
     name?: SortOrder
     vulgo?: SortOrder
     mae?: SortOrder
+    faccId?: SortOrder
+    cpf?: SortOrder
+    eventoId?: SortOrder
+    foto?: SortOrder
     pai?: SortOrder
     rg?: SortOrder
-    cpf?: SortOrder
-    foto?: SortOrder
-    faccId?: SortOrder
-    eventoId?: SortOrder
   }
 
   export type PessoaSumOrderByAggregateInput = {
@@ -8618,24 +8618,16 @@ export namespace Prisma {
     deleteMany?: PessoaScalarWhereInput | PessoaScalarWhereInput[]
   }
 
-  export type FaccCreateNestedOneWithoutPessoasInput = {
-    create?: XOR<FaccCreateWithoutPessoasInput, FaccUncheckedCreateWithoutPessoasInput>
-    connectOrCreate?: FaccCreateOrConnectWithoutPessoasInput
-    connect?: FaccWhereUniqueInput
-  }
-
   export type EventoCreateNestedOneWithoutPessoasInput = {
     create?: XOR<EventoCreateWithoutPessoasInput, EventoUncheckedCreateWithoutPessoasInput>
     connectOrCreate?: EventoCreateOrConnectWithoutPessoasInput
     connect?: EventoWhereUniqueInput
   }
 
-  export type FaccUpdateOneRequiredWithoutPessoasNestedInput = {
+  export type FaccCreateNestedOneWithoutPessoasInput = {
     create?: XOR<FaccCreateWithoutPessoasInput, FaccUncheckedCreateWithoutPessoasInput>
     connectOrCreate?: FaccCreateOrConnectWithoutPessoasInput
-    upsert?: FaccUpsertWithoutPessoasInput
     connect?: FaccWhereUniqueInput
-    update?: XOR<XOR<FaccUpdateToOneWithWhereWithoutPessoasInput, FaccUpdateWithoutPessoasInput>, FaccUncheckedUpdateWithoutPessoasInput>
   }
 
   export type EventoUpdateOneRequiredWithoutPessoasNestedInput = {
@@ -8644,6 +8636,14 @@ export namespace Prisma {
     upsert?: EventoUpsertWithoutPessoasInput
     connect?: EventoWhereUniqueInput
     update?: XOR<XOR<EventoUpdateToOneWithWhereWithoutPessoasInput, EventoUpdateWithoutPessoasInput>, EventoUncheckedUpdateWithoutPessoasInput>
+  }
+
+  export type FaccUpdateOneRequiredWithoutPessoasNestedInput = {
+    create?: XOR<FaccCreateWithoutPessoasInput, FaccUncheckedCreateWithoutPessoasInput>
+    connectOrCreate?: FaccCreateOrConnectWithoutPessoasInput
+    upsert?: FaccUpsertWithoutPessoasInput
+    connect?: FaccWhereUniqueInput
+    update?: XOR<XOR<FaccUpdateToOneWithWhereWithoutPessoasInput, FaccUpdateWithoutPessoasInput>, FaccUncheckedUpdateWithoutPessoasInput>
   }
 
   export type PessoaCreateNestedManyWithoutEventoInput = {
@@ -8827,8 +8827,8 @@ export namespace Prisma {
   export type UsuarioCreateWithoutOrganInput = {
     email: string
     name?: string | null
-    createdAt?: Date | string
     updatedAt?: Date | string
+    createdAt?: Date | string
     acesso: AcessoCreateNestedOneWithoutUsuariosInput
   }
 
@@ -8836,9 +8836,9 @@ export namespace Prisma {
     id?: number
     email: string
     name?: string | null
-    createdAt?: Date | string
     updatedAt?: Date | string
     acessoId: number
+    createdAt?: Date | string
   }
 
   export type UsuarioCreateOrConnectWithoutOrganInput = {
@@ -8874,17 +8874,17 @@ export namespace Prisma {
     id?: IntFilter<"Usuario"> | number
     email?: StringFilter<"Usuario"> | string
     name?: StringNullableFilter<"Usuario"> | string | null
-    createdAt?: DateTimeFilter<"Usuario"> | Date | string
     updatedAt?: DateTimeFilter<"Usuario"> | Date | string
     acessoId?: IntFilter<"Usuario"> | number
     organId?: IntFilter<"Usuario"> | number
+    createdAt?: DateTimeFilter<"Usuario"> | Date | string
   }
 
   export type UsuarioCreateWithoutAcessoInput = {
     email: string
     name?: string | null
-    createdAt?: Date | string
     updatedAt?: Date | string
+    createdAt?: Date | string
     organ: OrganCreateNestedOneWithoutUsuariosInput
   }
 
@@ -8892,9 +8892,9 @@ export namespace Prisma {
     id?: number
     email: string
     name?: string | null
-    createdAt?: Date | string
     updatedAt?: Date | string
     organId: number
+    createdAt?: Date | string
   }
 
   export type UsuarioCreateOrConnectWithoutAcessoInput = {
@@ -8995,10 +8995,10 @@ export namespace Prisma {
     name: string
     vulgo: string
     mae: string
-    pai: string
-    rg: string
     cpf: string
     foto: string
+    pai: string
+    rg: string
     evento: EventoCreateNestedOneWithoutPessoasInput
   }
 
@@ -9007,11 +9007,11 @@ export namespace Prisma {
     name: string
     vulgo: string
     mae: string
+    cpf: string
+    eventoId: number
+    foto: string
     pai: string
     rg: string
-    cpf: string
-    foto: string
-    eventoId: number
   }
 
   export type PessoaCreateOrConnectWithoutFaccInput = {
@@ -9048,26 +9048,12 @@ export namespace Prisma {
     name?: StringFilter<"Pessoa"> | string
     vulgo?: StringFilter<"Pessoa"> | string
     mae?: StringFilter<"Pessoa"> | string
+    faccId?: IntFilter<"Pessoa"> | number
+    cpf?: StringFilter<"Pessoa"> | string
+    eventoId?: IntFilter<"Pessoa"> | number
+    foto?: StringFilter<"Pessoa"> | string
     pai?: StringFilter<"Pessoa"> | string
     rg?: StringFilter<"Pessoa"> | string
-    cpf?: StringFilter<"Pessoa"> | string
-    foto?: StringFilter<"Pessoa"> | string
-    faccId?: IntFilter<"Pessoa"> | number
-    eventoId?: IntFilter<"Pessoa"> | number
-  }
-
-  export type FaccCreateWithoutPessoasInput = {
-    name: string
-  }
-
-  export type FaccUncheckedCreateWithoutPessoasInput = {
-    id?: number
-    name: string
-  }
-
-  export type FaccCreateOrConnectWithoutPessoasInput = {
-    where: FaccWhereUniqueInput
-    create: XOR<FaccCreateWithoutPessoasInput, FaccUncheckedCreateWithoutPessoasInput>
   }
 
   export type EventoCreateWithoutPessoasInput = {
@@ -9094,24 +9080,18 @@ export namespace Prisma {
     create: XOR<EventoCreateWithoutPessoasInput, EventoUncheckedCreateWithoutPessoasInput>
   }
 
-  export type FaccUpsertWithoutPessoasInput = {
-    update: XOR<FaccUpdateWithoutPessoasInput, FaccUncheckedUpdateWithoutPessoasInput>
+  export type FaccCreateWithoutPessoasInput = {
+    name: string
+  }
+
+  export type FaccUncheckedCreateWithoutPessoasInput = {
+    id?: number
+    name: string
+  }
+
+  export type FaccCreateOrConnectWithoutPessoasInput = {
+    where: FaccWhereUniqueInput
     create: XOR<FaccCreateWithoutPessoasInput, FaccUncheckedCreateWithoutPessoasInput>
-    where?: FaccWhereInput
-  }
-
-  export type FaccUpdateToOneWithWhereWithoutPessoasInput = {
-    where?: FaccWhereInput
-    data: XOR<FaccUpdateWithoutPessoasInput, FaccUncheckedUpdateWithoutPessoasInput>
-  }
-
-  export type FaccUpdateWithoutPessoasInput = {
-    name?: StringFieldUpdateOperationsInput | string
-  }
-
-  export type FaccUncheckedUpdateWithoutPessoasInput = {
-    id?: IntFieldUpdateOperationsInput | number
-    name?: StringFieldUpdateOperationsInput | string
   }
 
   export type EventoUpsertWithoutPessoasInput = {
@@ -9144,14 +9124,34 @@ export namespace Prisma {
     municipio?: StringFieldUpdateOperationsInput | string
   }
 
+  export type FaccUpsertWithoutPessoasInput = {
+    update: XOR<FaccUpdateWithoutPessoasInput, FaccUncheckedUpdateWithoutPessoasInput>
+    create: XOR<FaccCreateWithoutPessoasInput, FaccUncheckedCreateWithoutPessoasInput>
+    where?: FaccWhereInput
+  }
+
+  export type FaccUpdateToOneWithWhereWithoutPessoasInput = {
+    where?: FaccWhereInput
+    data: XOR<FaccUpdateWithoutPessoasInput, FaccUncheckedUpdateWithoutPessoasInput>
+  }
+
+  export type FaccUpdateWithoutPessoasInput = {
+    name?: StringFieldUpdateOperationsInput | string
+  }
+
+  export type FaccUncheckedUpdateWithoutPessoasInput = {
+    id?: IntFieldUpdateOperationsInput | number
+    name?: StringFieldUpdateOperationsInput | string
+  }
+
   export type PessoaCreateWithoutEventoInput = {
     name: string
     vulgo: string
     mae: string
-    pai: string
-    rg: string
     cpf: string
     foto: string
+    pai: string
+    rg: string
     facc: FaccCreateNestedOneWithoutPessoasInput
   }
 
@@ -9160,11 +9160,11 @@ export namespace Prisma {
     name: string
     vulgo: string
     mae: string
-    pai: string
-    rg: string
+    faccId: number
     cpf: string
     foto: string
-    faccId: number
+    pai: string
+    rg: string
   }
 
   export type PessoaCreateOrConnectWithoutEventoInput = {
@@ -9197,16 +9197,16 @@ export namespace Prisma {
     id?: number
     email: string
     name?: string | null
-    createdAt?: Date | string
     updatedAt?: Date | string
     acessoId: number
+    createdAt?: Date | string
   }
 
   export type UsuarioUpdateWithoutOrganInput = {
     email?: StringFieldUpdateOperationsInput | string
     name?: NullableStringFieldUpdateOperationsInput | string | null
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     acesso?: AcessoUpdateOneRequiredWithoutUsuariosNestedInput
   }
 
@@ -9214,34 +9214,34 @@ export namespace Prisma {
     id?: IntFieldUpdateOperationsInput | number
     email?: StringFieldUpdateOperationsInput | string
     name?: NullableStringFieldUpdateOperationsInput | string | null
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     acessoId?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type UsuarioUncheckedUpdateManyWithoutOrganInput = {
     id?: IntFieldUpdateOperationsInput | number
     email?: StringFieldUpdateOperationsInput | string
     name?: NullableStringFieldUpdateOperationsInput | string | null
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     acessoId?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type UsuarioCreateManyAcessoInput = {
     id?: number
     email: string
     name?: string | null
-    createdAt?: Date | string
     updatedAt?: Date | string
     organId: number
+    createdAt?: Date | string
   }
 
   export type UsuarioUpdateWithoutAcessoInput = {
     email?: StringFieldUpdateOperationsInput | string
     name?: NullableStringFieldUpdateOperationsInput | string | null
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     organ?: OrganUpdateOneRequiredWithoutUsuariosNestedInput
   }
 
@@ -9249,18 +9249,18 @@ export namespace Prisma {
     id?: IntFieldUpdateOperationsInput | number
     email?: StringFieldUpdateOperationsInput | string
     name?: NullableStringFieldUpdateOperationsInput | string | null
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     organId?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type UsuarioUncheckedUpdateManyWithoutAcessoInput = {
     id?: IntFieldUpdateOperationsInput | number
     email?: StringFieldUpdateOperationsInput | string
     name?: NullableStringFieldUpdateOperationsInput | string | null
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     organId?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type PessoaCreateManyFaccInput = {
@@ -9268,21 +9268,21 @@ export namespace Prisma {
     name: string
     vulgo: string
     mae: string
+    cpf: string
+    eventoId: number
+    foto: string
     pai: string
     rg: string
-    cpf: string
-    foto: string
-    eventoId: number
   }
 
   export type PessoaUpdateWithoutFaccInput = {
     name?: StringFieldUpdateOperationsInput | string
     vulgo?: StringFieldUpdateOperationsInput | string
     mae?: StringFieldUpdateOperationsInput | string
-    pai?: StringFieldUpdateOperationsInput | string
-    rg?: StringFieldUpdateOperationsInput | string
     cpf?: StringFieldUpdateOperationsInput | string
     foto?: StringFieldUpdateOperationsInput | string
+    pai?: StringFieldUpdateOperationsInput | string
+    rg?: StringFieldUpdateOperationsInput | string
     evento?: EventoUpdateOneRequiredWithoutPessoasNestedInput
   }
 
@@ -9291,11 +9291,11 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     vulgo?: StringFieldUpdateOperationsInput | string
     mae?: StringFieldUpdateOperationsInput | string
+    cpf?: StringFieldUpdateOperationsInput | string
+    eventoId?: IntFieldUpdateOperationsInput | number
+    foto?: StringFieldUpdateOperationsInput | string
     pai?: StringFieldUpdateOperationsInput | string
     rg?: StringFieldUpdateOperationsInput | string
-    cpf?: StringFieldUpdateOperationsInput | string
-    foto?: StringFieldUpdateOperationsInput | string
-    eventoId?: IntFieldUpdateOperationsInput | number
   }
 
   export type PessoaUncheckedUpdateManyWithoutFaccInput = {
@@ -9303,11 +9303,11 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     vulgo?: StringFieldUpdateOperationsInput | string
     mae?: StringFieldUpdateOperationsInput | string
+    cpf?: StringFieldUpdateOperationsInput | string
+    eventoId?: IntFieldUpdateOperationsInput | number
+    foto?: StringFieldUpdateOperationsInput | string
     pai?: StringFieldUpdateOperationsInput | string
     rg?: StringFieldUpdateOperationsInput | string
-    cpf?: StringFieldUpdateOperationsInput | string
-    foto?: StringFieldUpdateOperationsInput | string
-    eventoId?: IntFieldUpdateOperationsInput | number
   }
 
   export type PessoaCreateManyEventoInput = {
@@ -9315,21 +9315,21 @@ export namespace Prisma {
     name: string
     vulgo: string
     mae: string
-    pai: string
-    rg: string
+    faccId: number
     cpf: string
     foto: string
-    faccId: number
+    pai: string
+    rg: string
   }
 
   export type PessoaUpdateWithoutEventoInput = {
     name?: StringFieldUpdateOperationsInput | string
     vulgo?: StringFieldUpdateOperationsInput | string
     mae?: StringFieldUpdateOperationsInput | string
-    pai?: StringFieldUpdateOperationsInput | string
-    rg?: StringFieldUpdateOperationsInput | string
     cpf?: StringFieldUpdateOperationsInput | string
     foto?: StringFieldUpdateOperationsInput | string
+    pai?: StringFieldUpdateOperationsInput | string
+    rg?: StringFieldUpdateOperationsInput | string
     facc?: FaccUpdateOneRequiredWithoutPessoasNestedInput
   }
 
@@ -9338,11 +9338,11 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     vulgo?: StringFieldUpdateOperationsInput | string
     mae?: StringFieldUpdateOperationsInput | string
-    pai?: StringFieldUpdateOperationsInput | string
-    rg?: StringFieldUpdateOperationsInput | string
+    faccId?: IntFieldUpdateOperationsInput | number
     cpf?: StringFieldUpdateOperationsInput | string
     foto?: StringFieldUpdateOperationsInput | string
-    faccId?: IntFieldUpdateOperationsInput | number
+    pai?: StringFieldUpdateOperationsInput | string
+    rg?: StringFieldUpdateOperationsInput | string
   }
 
   export type PessoaUncheckedUpdateManyWithoutEventoInput = {
@@ -9350,11 +9350,11 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     vulgo?: StringFieldUpdateOperationsInput | string
     mae?: StringFieldUpdateOperationsInput | string
-    pai?: StringFieldUpdateOperationsInput | string
-    rg?: StringFieldUpdateOperationsInput | string
+    faccId?: IntFieldUpdateOperationsInput | number
     cpf?: StringFieldUpdateOperationsInput | string
     foto?: StringFieldUpdateOperationsInput | string
-    faccId?: IntFieldUpdateOperationsInput | number
+    pai?: StringFieldUpdateOperationsInput | string
+    rg?: StringFieldUpdateOperationsInput | string
   }
 
 
