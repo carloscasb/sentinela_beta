@@ -4,7 +4,7 @@ import Image from 'next/image'
 export default function Home() {
   return (
     <>
-      <div className=" float-left  " >
+      <div className=" float-left " >
 
         <div className=' justify-center items-center'>
 

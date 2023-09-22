@@ -18,7 +18,7 @@ export default function Sidebar() {
             <div >
                 <div>
                     <Image
-                        src="/next.svg"
+                        src="/logoHDC.svg"
                         width={150}
                         height={150}
                         alt="lobo3"

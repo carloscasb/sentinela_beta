@@ -1,6 +1,11 @@
+'use client'
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+
 
 export default function Pessoa(){
+
+   const router = useRouter()
 
     return (
 
@@ -24,6 +29,18 @@ export default function Pessoa(){
   
 
 </div>
+
+                <div className="grid gap-4 grid-cols-2">
+                    <div> <button>01</button>   </div>
+                    <div> <button type="button" onClick={() => router.push('/site/usuarios')} className="btn btn-primary
+               m-2 w-40
+                
+              ">
+                        Pessoa
+                    </button></div>
+                    <div>03</div>
+                    <div>04</div>
+                </div>
 
             </div>
             

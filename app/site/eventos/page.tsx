@@ -12,7 +12,7 @@ export default function Evento() {
     <div className="flex-grow text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">
 
    
-    <form className="  bg-red-500  items-center justify-center  text-center">
+    <form className="  bg-red-100  items-center justify-center  text-center">
       <div className="space-y-10">
         
 
